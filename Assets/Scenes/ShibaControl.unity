@@ -2283,6 +2283,7 @@ GameObject:
   - component: {fileID: 1378265551}
   - component: {fileID: 1378265550}
   - component: {fileID: 1378265552}
+  - component: {fileID: 1378265553}
   m_Layer: 0
   m_Name: ShibaModel2
   m_TagString: Untagged
@@ -2358,6 +2359,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244c14ff3963bd84ba4d711959f85e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &1378265553
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378265548}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  - {fileID: -4836511105951358979, guid: b3a427ae5ff6b294cba77eb78d2daff2, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1381026468
 GameObject:
   m_ObjectHideFlags: 0
