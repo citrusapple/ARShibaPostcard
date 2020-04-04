@@ -20,13 +20,15 @@ public class ShibaController : MonoBehaviour
         float x = CrossPlatformInputManager.GetAxis ("Horizontal");
         float y = CrossPlatformInputManager.GetAxis ("Vertical");
 
-        Vector3 movement = new Vector3(x, y, 0);
+        //movement script for shiba to move forward/backwards/left/right respective to postcard
+        Vector3 movement = new Vector3(x, -y, 0);
         rb.velocity = movement * 10f;
 
-        if (x != 0 && y != 0)
-        {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, Mathf.Atan2(x, y) + Mathf.Rad2Deg);
-        }
+        //change the below, axis is wrong buggy control
+        //if (x != 0 && y != 0)
+        //{
+        //    transform.eulerAngles = new Vector3( transform.eulerAngles.x, Mathf.Atan2(x, y) * Mathf.Rad2Deg, transform.eulerAngles.y);
+        //}
         if (x != 0 || y != 0)
         {
             anim.Play("backBone|backBoneAction.001");
