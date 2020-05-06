@@ -7,31 +7,35 @@ public class ShibaController : MonoBehaviour
 {
     private Rigidbody rb;
     private Animation anim;
-    // Start is called before the first frame update
+    // start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animation>();
     }
 
-    // Update is called once per frame
+    // update is called once per frame
     void Update()
     {
-        float x = CrossPlatformInputManager.GetAxis ("Horizontal");
-        float y = CrossPlatformInputManager.GetAxis ("Vertical");
+        float x = CrossPlatformInputManager.GetAxis("Horizontal");
+        float y = CrossPlatformInputManager.GetAxis("Vertical");
 
         //movement script for shiba to move forward/backwards/left/right respective to postcard
         Vector3 movement = new Vector3(x, -y, 0);
         rb.velocity = movement * 10f;
 
-        //change the below, axis is wrong buggy control
-        //if (x != 0 && y != 0)
-        //{
-        //    transform.eulerAngles = new Vector3( transform.eulerAngles.x, Mathf.Atan2(x, y) * Mathf.Rad2Deg, transform.eulerAngles.y);
-        //}
+        //change the below, axis is wrong buggy control  
+        if (x != 0 && y != 0)
+        {
+            //transform.rotate(0 ,mathf.atan2(-y, x) * mathf.rad2deg, 0);
+            //transform.eulerangles = new vector3(mathf.atan2(y, x) * mathf.rad2deg , transform.eulerangles.y, transform.eulerangles.z);
+            //transform.rotation = Quaternion.LookRotation(transform.position + Vector3.up * 2f - transform.position, Vector3.up);
+
+        }
         if (x != 0 || y != 0)
         {
-            anim.Play("backBone|backBoneAction.001");
+            anim.Play("backbone|backboneaction.001");
         }
     }
 }
+
