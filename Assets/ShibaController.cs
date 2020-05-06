@@ -28,7 +28,7 @@ public class ShibaController : MonoBehaviour
         if (x != 0 && y != 0)
         {
             //transform.rotate(0 ,mathf.atan2(-y, x) * mathf.rad2deg, 0);
-            //transform.eulerangles = new vector3(mathf.atan2(y, x) * mathf.rad2deg , transform.eulerangles.y, transform.eulerangles.z);
+            transform.eulerAngles = new Vector3(Mathf.Atan2(y, x) * Mathf.Rad2Deg , transform.eulerAngles.y, transform.eulerAngles.z);
             //transform.rotation = Quaternion.LookRotation(transform.position + Vector3.up * 2f - transform.position, Vector3.up);
 
         }
